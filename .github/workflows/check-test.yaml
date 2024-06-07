@@ -33,7 +33,7 @@ jobs:
         if: github.event_name == 'pull_request'
         run: |
           SINCE_REF=remotes/origin/main
-          if [  ${{ runner.os }} == 'Windows' ]; then
+          if [  "${{ runner.os }}" == "Windows" ]; then
             echo "SINCE_REF=$SINCE_REF" >> $env:GITHUB_ENV
           else
             echo "SINCE_REF=$SINCE_REF" >> $GITHUB_ENV	
