@@ -41,8 +41,7 @@ jobs:
       - name: InfoMain
         run: |
           echo "Since: ${SINCE_REF}"
-          echo "Github: ${github}"
-          echo "Runner: ${runner}"
+          echo "Since 2: ${{ env.SINCE_REF }}"
         shell: bash
 
       - name: Install Deps Ubuntu
